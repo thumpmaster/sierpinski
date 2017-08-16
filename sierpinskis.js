@@ -4,7 +4,7 @@ $(document). ready(function() {
 		this.width = width;
 		this.height = height;
 		this.context = context;
-		this.minWidth = 20;
+		this.minWidth = 50;
 		this.currentZoom = 1.0;
 		this.$wrapper = $(wrapper);
         this.$zoomInDiv = $(zoomin);
@@ -54,13 +54,14 @@ $(document). ready(function() {
         },
 		zoomIn: function () {
             this.currentZoom = this.currentZoom+0.10;
-            if(this.currentZoom > 2) return;
+            if(this.currentZoom > 4) return;
             var scaleString = "scale("+this.currentZoom+")";
             this.$wrapper.css({
                 transform: scaleString, // set zoom
                 transformOrigin: 'bottom right' // set transform scale base
             });
             this.minWidth = this.minWidth - 2;
+            console.log(this.minWidth);
             if(this.minWidth > 0) {
                 this.drawFirstTriangle();
             }
@@ -69,7 +70,7 @@ $(document). ready(function() {
             this.$wrapper.css({
                 transform: 'none'
             });
-            this.minWidth = 20;
+            this.minWidth = 50;
             this.drawFirstTriangle();
         }
 	};
