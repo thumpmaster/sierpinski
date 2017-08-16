@@ -1,4 +1,3 @@
 # sierpinski
 
-This single-page application shows a Sierpinski Triangle, where it is possible to zoom. 
-Upon zoom,
+This single-page application shows a Sierpinski Triangle, where it is possible to zoom.
