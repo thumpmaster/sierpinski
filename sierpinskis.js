@@ -61,7 +61,6 @@ $(document). ready(function() {
                 transformOrigin: 'bottom right' // set transform scale base
             });
             this.minWidth = this.minWidth - 2;
-            console.log(this.minWidth);
             if(this.minWidth > 0) {
                 this.drawFirstTriangle();
             }
