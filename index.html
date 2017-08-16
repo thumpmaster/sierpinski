@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sierpinski Triangle</title>
-  </head>
-  <body>
-    <canvas id="sierpinskis" height="520" width="600"></canvas>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="sierpinskis.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Sierpinski Triangle</title>
+  <style>
+    .center {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+    }
+    .container {
+      border: 1px solid black;
+      overflow: hidden;
+      height: 520px;
+      width: 600px;
+    }
+    .buttons {
+      padding: 20px;
+    }
+    #zoom_in, #zoom_out {
+      font-family: Arial;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="center">
+  <div align="center" class="buttons">
+    <a id="zoom_in">zoom in</a>
+    <a id="zoom_out">zoom out</a>
+  </div>
+  <div class="container">
+    <div class="wrapper" style="width:600px;overflow:auto">
+      <canvas id="sierpinskis" height="520" width="600"></canvas>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="sierpinskis.js"></script>
+
+</body>
 </html>
